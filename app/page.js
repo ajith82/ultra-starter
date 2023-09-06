@@ -17,7 +17,8 @@ const Home = () => {
       });
       setTimeline(tl);
     });
-    return context.revert();
+
+    return () => context.revert();
   }, []);
 
   return (
